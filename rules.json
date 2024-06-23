@@ -1,0 +1,37 @@
+{
+    "rule_1" : {
+        "apply_type" : "all",
+        "cohorts" : [
+            {
+                "field" : "FROM",
+                "condition" : "CONTAINS",
+                "value" : "swiggy.in"
+            },
+            {
+                "field" : "TO",
+                "condition" : "EQUALS",
+                "value" : "tahamustafa053@gmail.com"
+            },
+            {
+                "field" : "DATE",
+                "condition" : "IS_LESS_THAN",
+                "value" : 3
+            },
+            {
+                "field" : "SUBJECT",
+                "condition" : "CONTAINS",
+                "value" : "order"
+            }
+        ],
+        "actions" : [
+            {
+                "type" : "MARK_READ",
+                "label" : "UNREAD"
+            },
+            {
+                "type" : "MOVE",
+                "label" : "STARRED"
+            }
+        ]
+    }
+}
