@@ -122,4 +122,4 @@ if __name__ == '__main__':
     
     for message_id in message_ids:
         print("Updating email : ", message_id)
-        # perform_actions(service, message_id, actions)
+        perform_actions(service, message_id, actions)

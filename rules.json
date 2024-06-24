@@ -15,7 +15,7 @@
             {
                 "field" : "DATE",
                 "condition" : "IS_LESS_THAN",
-                "value" : 3
+                "value" : 4
             },
             {
                 "field" : "SUBJECT",

@@ -19,7 +19,7 @@ class TestGmailAPI(unittest.TestCase):
         if messages:
             msg = messages[0]
             self.assertIsInstance(msg, dict)
-            self.assertIn('id', msg)
+            self.assertIn('message_id', msg)
         else:
             self.skipTest("No messages in inbox")
 
@@ -37,8 +37,8 @@ class TestGmailAPI(unittest.TestCase):
         rules, apply_type, actions = rule['cohorts'], rule['apply_type'], rule['actions']
         messages = get_emails()
         matched_messages = evaluate_rule(messages, rules, apply_type)
-        for msg in matched_messages:
-            perform_actions(self.service, msg['id'], actions)
+        for message_id in matched_messages:
+            perform_actions(self.service, message_id, actions)
 
 if __name__ == '__main__':
     unittest.main()
